@@ -21,7 +21,7 @@ exports.createPages=async ({graphql,actions})=>{
         }
       } 
       }`)
-      console.log(JSON.stringify(response));
+      // console.log(JSON.stringify(response));
       response.data.allContentfulPost.edges.forEach(({node}) => {
        
           createPage({

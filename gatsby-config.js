@@ -3,16 +3,17 @@
  *
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
-
+const dotenv = require("dotenv") ;
+dotenv.config()
 module.exports = {
   /* Your site config here */
   plugins: [
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: `8ns48pwpsg5n`,
+        spaceId: process.env.SPACE_ID,
         // Learn about environment variables: https://gatsby.dev/env-vars
-        accessToken: "a9IaqmbK2DgxkHJP0hcWPPbbmXv2HsiYg3LjOMXgLPA",
+        accessToken: process.env.ACCESS_TOKEN,
       },
     },
     `gatsby-plugin-material-ui`,
